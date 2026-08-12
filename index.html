@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishit Kumar — Data Science &amp; GenAI Portfolio</title>
+<meta name="description" content="Portfolio of Nishit Kumar, final-year B.Tech student at NITK Surathkal specializing in Data Science, Machine Learning and Generative AI. Explore projects in RAG, multi-agent systems, deep learning and more.">
+<meta name="theme-color" content="#0a0a0a">
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- EmailJS SDK (used for the contact form) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-name-wrap">
+    <span class="preloader-name">Nishit Kumar</span>
+  </div>
+  <div class="preloader-bar"><span class="preloader-bar-fill" id="preloaderFill"></span></div>
+  <div class="preloader-pct" id="preloaderPct">0%</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Navbar -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">NK<span class="accent">.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="assets/Nishit_Kumar_Resume.pdf" download="Nishit_Kumar_Resume.pdf" class="nav-resume" aria-label="Download resume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Resume</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-links">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+  <a href="assets/Nishit_Kumar_Resume.pdf" download="Nishit_Kumar_Resume.pdf" class="mobile-resume">Download Resume</a>
+</div>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="reveal-wrap">
+        <p class="hero-eyebrow reveal-up" style="--d:1.1s">Hello, I'm</p>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="reveal-wrap"><span class="reveal-up word" style="--d:1.25s">Nishit</span></span>
+        <span class="reveal-wrap"><span class="reveal-up word" style="--d:1.35s">Kumar</span></span>
+      </h1>
+
+      <div class="hero-role" aria-live="polite">
+        <span id="roleText" class="hero-role-text"></span><span class="role-cursor"></span>
+      </div>
+
+      <div class="hero-cta reveal-up" style="--d:2.05s">
+        <a href="#projects" class="btn btn-solid magnetic"><span>View My Work</span></a>
+        <a href="#contact" class="btn btn-ghost magnetic"><span>Contact Me</span></a>
+      </div>
+
+      <div class="hero-stats reveal-up" style="--d:2.25s">
+        <div class="stat"><span class="stat-num">400+</span><span class="stat-label">DSA Problems</span></div>
+        <div class="stat"><span class="stat-num">8.45</span><span class="stat-label">CGPA</span></div>
+        <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Projects Shipped</span></div>
+      </div>
+    </div>
+
+    <div class="hero-badge reveal-up" style="--d:2.4s">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span>Open to Data Science &amp; GenAI roles, 2027</span>
+    </div>
+
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll to About section">
+      <span></span>
+    </button>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-media" data-reveal="left">
+          <div class="about-media-frame"></div>
+          <div class="about-media-photo">
+            <img src="assets/profile.jpg" alt="Portrait of Nishit Kumar" loading="lazy" width="800" height="1000">
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow" data-reveal>About Me</p>
+          <h2 class="section-title" data-reveal>Turning data into<br>decisions that hold up.</h2>
+
+          <div class="about-text" data-reveal>
+            <p>I'm Nishit Kumar, a final-year B.Tech student at the National Institute of Technology Karnataka (NITK), Surathkal, with a strong focus on Data Science, Machine Learning and Generative AI.</p>
+            <p>My work centers on Generative AI and Agentic AI systems — I design and build multi-agent pipelines that turn complex reasoning into reliable, production-ready applications.</p>
+            <p>My foundation spans Python, SQL and core ML/DL frameworks (TensorFlow, Keras, Scikit-learn), extending into the GenAI stack — Hugging Face Transformers, FAISS, ChromaDB, LangChain/LangGraph and the Groq API — alongside a solid grounding in statistical modeling, hypothesis testing and feature engineering.</p>
+            <p>Beyond code, I've led marketing outreach for Incident, NITK's annual cultural fest, and built &amp; maintained the platform for the Hindi Evam Sanskrit Club. I placed in the top 3% of JEE Advanced/Mains among over a million candidates and have solved 400+ problems across LeetCode and GeeksforGeeks.</p>
+          </div>
+
+          <div class="about-stats" data-reveal>
+            <div class="astat"><span class="astat-num">6+</span><span class="astat-label">Projects</span></div>
+            <div class="astat"><span class="astat-num">400+</span><span class="astat-label">DSA Problems</span></div>
+            <div class="astat"><span class="astat-num">Top 3%</span><span class="astat-label">JEE Advanced/Mains</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>What I Work With</p>
+      <h2 class="section-title center" data-reveal>Technical Arsenal</h2>
+
+      <div class="skills-grid">
+        <div class="skill-col" data-reveal style="--sd:0s">
+          <h3 class="skill-col-title">Programming &amp; Core</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-col" data-reveal style="--sd:.1s">
+          <h3 class="skill-col-title">ML &amp; Data</h3>
+          <div class="skill-tags">
+            <span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Keras</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="skill-col" data-reveal style="--sd:.2s">
+          <h3 class="skill-col-title">GenAI &amp; Agentic</h3>
+          <div class="skill-tags">
+            <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">FAISS</span><span class="tag">Hugging Face</span><span class="tag">ChromaDB</span><span class="tag">SentenceTransformers</span><span class="tag">Groq API</span><span class="tag">Pydantic</span>
+          </div>
+        </div>
+
+        <div class="skill-col" data-reveal style="--sd:.3s">
+          <h3 class="skill-col-title">Concepts</h3>
+          <div class="skill-tags">
+            <span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">NLP</span><span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">Semantic Search</span><span class="tag">Statistical Modeling</span><span class="tag">A/B Testing</span><span class="tag">EDA</span>
+          </div>
+        </div>
+
+        <div class="skill-col" data-reveal style="--sd:.4s">
+          <h3 class="skill-col-title">Tools &amp; Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Streamlit</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">VS Code</span><span class="tag">Jupyter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <div class="projects-head wrap">
+      <p class="eyebrow" data-reveal>Selected Work</p>
+      <h2 class="section-title" data-reveal>Projects</h2>
+
+      <div class="filters" data-reveal role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="genai" role="tab" aria-selected="false">GenAI &amp; Agentic</button>
+        <button class="filter-btn" data-filter="dl" role="tab" aria-selected="false">Deep Learning</button>
+        <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false">Machine Learning</button>
+        <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">Others</button>
+      </div>
+    </div>
+
+    <div class="projects-viewport" id="projectsViewport">
+      <div class="projects-track" id="projectsTrack">
+
+        <article class="pcard" data-cat="genai" style="--hue:190">
+          <span class="pcard-badge">Featured</span>
+          <div class="pcard-visual">
+            <img src="assets/projects/smart-shopping-agent.png" alt="Smart Shopping Agent app screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">SS</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Smart Shopping Agent</h3>
+            <p class="pcard-sub">Agentic AI shopping assistant · LangGraph + Groq + SerpAPI</p>
+            <ul class="pcard-points">
+              <li>7-node multi-agent pipeline with intent classification and multi-turn memory</li>
+              <li>Live product scoring, fake-discount detection and hallucination-resistant output</li>
+              <li>Deployed on Streamlit Cloud</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>LangGraph</span><span>Groq</span><span>SerpAPI</span><span>Streamlit</span><span>Pydantic</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://smart-shopping-agent-negotiator.streamlit.app/" target="_blank" rel="noreferrer" class="plink">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="https://github.com/nishit-12-kumar/Smart-Shopping-Agent" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="genai" style="--hue:170">
+          <div class="pcard-visual">
+            <img src="assets/projects/hiremind.png" alt="HireMind app screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">HM</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">HireMind</h3>
+            <p class="pcard-sub">Intelligent candidate screening &amp; interview orchestration</p>
+            <ul class="pcard-points">
+              <li>Semantic resume analysis and candidate matching with a Chroma vector store</li>
+              <li>Automated job-description parsing and contextual interview-question generation</li>
+              <li>Full pipeline with PDF report generation and an interactive dashboard</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>LangGraph</span><span>LLaMA 3</span><span>SerpAPI</span><span>Groq API</span><span>Streamlit</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://hiremind--multi-agent-recruitment-system.streamlit.app/" target="_blank" rel="noreferrer" class="plink">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="https://github.com/nishit-12-kumar/HireMind" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="dl" style="--hue:150">
+          <div class="pcard-visual">
+            <img src="assets/projects/consumer-complaint-classifier.png" alt="Consumer Complaint Classifier app screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">CC</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Consumer Complaint Classifier</h3>
+            <p class="pcard-sub">Deep learning NLP for classifying financial complaints, with explainability</p>
+            <ul class="pcard-points">
+              <li>BiLSTM, LSTM &amp; CNN architectures trained with GloVe embeddings</li>
+              <li>Occlusion-based XAI token highlighting for transparency</li>
+              <li>Automated PDF compliance reporting</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>TensorFlow</span><span>Keras</span><span>Streamlit</span><span>GloVe</span><span>ReportLab</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://consumer-complaint-classifier.streamlit.app/" target="_blank" rel="noreferrer" class="plink">Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+              <a href="https://github.com/nishit-12-kumar/Consumer-Complaint-Classifier" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="dl" style="--hue:200">
+          <div class="pcard-visual">
+            <img src="assets/projects/fashion-recommendation-system.png" alt="Fashion Recommendation System screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">FR</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Fashion Recommendation System</h3>
+            <p class="pcard-sub">Visually-similar fashion recommendations at scale</p>
+            <ul class="pcard-points">
+              <li>ResNet50-based image embeddings for semantic retrieval</li>
+              <li>FAISS similarity search across 44K+ catalogue items</li>
+              <li>Fast, real-time recommendation serving</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>PyTorch</span><span>ResNet50</span><span>FAISS</span><span>Flask</span><span>TensorFlow</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://github.com/nishit-12-kumar/Fashion-Recommendation-System" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="other" style="--hue:210">
+          <div class="pcard-visual">
+            <img src="assets/projects/candidate-calling-bot.png" alt="Candidate Calling Bot screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">CB</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Candidate Calling Bot</h3>
+            <p class="pcard-sub">Voice-based AI for automated candidate outreach</p>
+            <ul class="pcard-points">
+              <li>Automated calling with predefined question flows</li>
+              <li>Voice-response collection via the Twilio API</li>
+              <li>Real-time logging to Google Sheets</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>Flask</span><span>Twilio API</span><span>Google Sheets API</span><span>JavaScript</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://github.com/nishit-12-kumar/Candidate-Calling-Bot" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="ml" style="--hue:180">
+          <div class="pcard-visual">
+            <img src="assets/projects/loan-approval-prediction.png" alt="Loan Approval Prediction System screenshot" loading="lazy" onerror="this.remove()">
+            <span class="pcard-mono">LA</span>
+          </div>
+          <div class="pcard-body">
+            <h3 class="pcard-title">Loan Approval Prediction System</h3>
+            <p class="pcard-sub">ML-driven loan approval prediction on applicant data</p>
+            <ul class="pcard-points">
+              <li>Multiple models compared — Random Forest, SVM, KNN, Decision Tree, Logistic Regression, Naive Bayes</li>
+              <li>Hyperparameters tuned with GridSearchCV</li>
+              <li>End-to-end pipeline with web deployment</li>
+            </ul>
+            <div class="pcard-tech">
+              <span>Python</span><span>Flask</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+            <div class="pcard-links">
+              <a href="https://github.com/nishit-12-kumar/Loan-Approval-Prediction-Model" target="_blank" rel="noreferrer" class="plink plink-ghost">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="projects-hint wrap" aria-hidden="true">
+      <span class="hint-arrow">←</span> Scroll to explore <span class="hint-arrow">→</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="experience">
+    <div class="wrap">
+      <p class="eyebrow center" data-reveal>Journey So Far</p>
+      <h2 class="section-title center" data-reveal>Experience &amp; Education</h2>
+
+      <div class="timeline">
+        <div class="timeline-item" data-reveal data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Aug 2024 — Present</span>
+            <h3 class="timeline-role">Web Developer</h3>
+            <p class="timeline-org">Hindi Evam Sanskrit Club (HESC), NITK</p>
+            <p class="timeline-desc">Designed and maintain the club's website, shipping responsive layouts and improving engagement. Handle the technical side of online events and competitions for 500+ members.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Jun 2024 — Mar 2025</span>
+            <h3 class="timeline-role">Marketing Executive</h3>
+            <p class="timeline-org">Incident — NITK's Annual Cultural Fest</p>
+            <p class="timeline-desc">Led marketing initiatives for one of South India's largest college cultural festivals — digital campaigns and sponsor outreach reaching 50,000+ students.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 — 2027 (Final Year)</span>
+            <h3 class="timeline-role">B.Tech, Mining Engineering</h3>
+            <p class="timeline-org">National Institute of Technology Karnataka (NITK), Surathkal</p>
+            <p class="timeline-desc">CGPA 8.45. Coursework alongside a self-driven focus on Data Structures &amp; Algorithms, Machine Learning, Deep Learning and Generative AI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-blob" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-copy" data-reveal="left">
+          <h2 class="contact-title">Let's Build<br>Something<br>Together.</h2>
+          <p class="contact-lead">I'm looking for full-time Data Science / GenAI roles for the 2027 graduating class. Open to opportunities, collaborations, or just a good conversation about ML.</p>
+
+          <div class="contact-links">
+            <a href="mailto:nishitkumaroll12@gmail.com" class="clink magnetic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>nishitkumaroll12@gmail.com</span>
+              <svg class="clink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/nishit-12-kumar/" target="_blank" rel="noreferrer" class="clink magnetic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+              <svg class="clink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://github.com/nishit-12-kumar" target="_blank" rel="noreferrer" class="clink magnetic">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub</span>
+              <svg class="clink-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" data-reveal="right" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about the opportunity or project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid full magnetic" id="sendBtn"><span id="sendBtnText">Send Message</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a href="#top" class="footer-logo">NK<span class="accent">.</span></a>
+    <p class="footer-copy">© <span id="year"></span> Nishit Kumar.</p>
+    <button class="to-top magnetic" id="toTop" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
